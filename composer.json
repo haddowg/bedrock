@@ -43,11 +43,14 @@
     "php": ">=5.4",
     "johnpbloch/wordpress": "4.1",
     "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "1.0.9"
+    "vlucas/phpdotenv": "1.0.9",
+    "roots/soil": "3.0.3",
+    "haddowg/roots":"dev-master",
+    "haddowg/metamaterial":"dev-master"
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "roots/soil"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
