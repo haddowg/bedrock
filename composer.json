@@ -46,7 +46,7 @@
     "composer/installers": "v1.0.12",
     "vlucas/phpdotenv": "1.0.9",
     "roots/soil": "3.0.3",
-    "haddowg/roots":"dev-master",
+    "haddowg/canvas":"dev-master",
     "haddowg/metamaterial":"dev-master"
   },
   "extra": {
