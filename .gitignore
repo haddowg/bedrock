@@ -1,14 +1,16 @@
 # Application
-web/app/plugins/*
+
+web/app/themes
+!web/app/themes/.gitkeep
+web/app/plugins
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*
 !web/app/mu-plugins/.gitkeep
 web/app/upgrade
-web/app/uploads/*
-!web/app/uploads/.gitkeep
 !web/app/mu-plugins/disallow-indexing.php
 !web/app/mu-plugins/register-theme-directory.php
 !web/app/mu-plugins/bedrock-autoloader.php
+web/app/languages
 
 # WordPress
 web/wp
@@ -26,6 +28,7 @@ sql-dump-*.sql
 # Vendor (e.g. Composer)
 vendor/*
 !vendor/.gitkeep
+composer.lock
 
 # Node Package Manager
 node_modules
@@ -33,3 +36,6 @@ node_modules
 # Vagrant
 bin
 .vagrant
+
+# PHPStorm
+.idea

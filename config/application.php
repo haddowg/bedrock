@@ -31,6 +31,11 @@ define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 
 /**
+ * Custom Uploads Directory
+ */
+define( 'UPLOADS', WP_HOME . CONTENT_DIR .'/media' );
+
+/**
  * DB settings
  */
 define('DB_CHARSET', 'utf8');
