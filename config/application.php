@@ -33,7 +33,7 @@ define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
 /**
  * Custom Uploads Directory
  */
-define( 'UPLOADS', WP_HOME . CONTENT_DIR .'/media' );
+define( 'UPLOADS', WP_HOME . CONTENT_DIR . '/' . getenv('MEDIA_DIR') ? trim(getenv('MEDIA_DIR'),'/') : 'media' );
 
 /**
  * DB settings
@@ -57,9 +57,9 @@ define('NONCE_SALT', getenv('NONCE_SALT'));
 /**
  * Custom Settings
  */
-define('AUTOMATIC_UPDATER_DISABLED', true);
-define('DISABLE_WP_CRON', true);
-define('DISALLOW_FILE_EDIT', true);
+define('AUTOMATIC_UPDATER_DISABLED', true && (getenv(AUTOMATIC_UPDATER_DISABLED)!=false || getenv(AUTOMATIC_UPDATER_DISABLED)===false));
+define('DISABLE_WP_CRON', true && (getenv(DISABLE_WP_CRON)!=false || getenv(DISABLE_WP_CRON)===false));
+define('DISALLOW_FILE_EDIT', true && (getenv(DISALLOW_FILE_EDIT)!=false || getenv(DISALLOW_FILE_EDIT)===false));
 
 /**
  * Bootstrap WordPress
